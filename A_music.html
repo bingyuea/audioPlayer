@@ -1,0 +1,108 @@
+ <!DOCTYPE html>  
+    <html>  
+    <head>  
+      <meta charset="UTF-8">  
+      <title>HTML5环形音乐播放器</title>  
+      <link rel="stylesheet" href="music.css" media="screen" type="text/css" />  
+      <link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1/css/font-awesome.min.css"/>
+    </head>  
+    <body>  
+    <div style="text-align:center;clear:both">  
+    </div>  
+      <div id="container">  
+        <label class="to-back-label" for="to-back"><i class="fa fa-bars fa-lg"></i></label><!-- 歌曲播放列表按钮 -->  
+        <input type="checkbox" id="to-back">  
+        <canvas id="progress" width="320" height="320"></canvas><!-- 进度条 -->  
+        <div id="player">  
+            <audio id="audio" src="3.mp3"></audio>  
+            <img src="bg6.jpg" id="bg"/><!-- 专辑封面 -->  
+            <label class="to-lyrics-label" for="to-lyrics"><i class="fa fa-caret-down fa-lg"></i></label>  
+            <input type="checkbox" id="to-lyrics"><!-- 歌词切换 -->  
+            <div class="cover">  
+                <div class="controls">  
+                    <button id="play-type" class="play-type" title="播放模式"><i class="icon-retweet"></i></button>  
+                    <button id="backward" class="backward" title="上一首"><i class="icon-fast-backward"></i></button>            
+                    <!-- 暂停 -->  
+                    <button id="playpause" class="play-pause" title="暂停" <!--onclick="togglePlayPause()-->"><i class="icon-play"></i></button>  
+                    <!-- 前进 -->  
+                    <button id="forward" class="forward" title="下一首"><i class="icon-fast-forward"></i></button>  
+                    <!-- 循环播放 -->  
+                    <button id="play-loop" class="play-loop" title="循环播放"><i class="icon-random"></i></button>  
+                    <!-- 音量控制 -->  
+                    <input id="volume" name="volume" min="0" max="1" step="0.1" type="range" />  
+                </div>  
+                <div class="info">  
+                    <p class="song"><a href="javascript:(void);">Hero</a></p>  
+                    <p class="author"><a href="javascript:(void);">Enrique Iglesias</a></p>  
+                </div>  
+                <div class="lyrics">  
+                	<!--<p>歌曲名:Hero</p>
+					<p>歌手:Enrique Iglesias</p>-->
+					<p>专辑:Addicted</p>
+
+					<p>Would you dance</p>
+					<p>If I asked you to dance?</p>
+					<p>Would you run</p>
+					<p>And never look back?</p>
+					<p>Would you cry</p>
+					<p>If you saw me crying?</p>
+					<p>And would you save my soul, tonight?</p>
+					<p>Would you tremble</p>
+					<p>If I touched your lips?</p>
+					<p>Would you laugh?</p>
+					<p>Oh please tell me this.</p>
+					<p>Now would you die</p>
+					<p>For the one you loved?</p>
+					<p>Hold me in your arms, tonight.</p>
+					<p>I can be your hero, baby.</p>
+					<p>I can kiss away the pain.</p>
+					<p>I will stand by you forever.</p>
+					<p>You can take my breath away.</p>
+					<p>Would you swear</p>
+					<p>That you ll always be mine?</p>
+					<p>Or would you lie?</p>
+					<p>would you run and hide?</p>
+					<p>Am I in too deep?</p>
+					<p>Have I lost my mind?</p>
+					<p>I don t care...</p>
+					<p>You re here tonight.</p>
+					<p>I can be your hero, baby.</p>
+					<p>I can kiss away the pain.</p>
+					<p>I will stand by you forever.</p>
+					<p>You can take my breath away.</p>
+					<p>I just want to hold you.</p>
+					<p>I just want to hold you.</p>
+					<p>Oh...yeah</p>
+					<p>Am I in too deep?</p>
+					<p>Have I lost my mind?</p>
+					<p>I don t care...</p>
+					<p>You re here tonight.</p>
+					<p>I can be your hero, baby.</p>
+					<p>I can kiss away the pain.</p>
+					<p>I will stand by you forever.</p>
+					<p>I can be your hero.</p>
+					<p>I can kiss away the pain.</p>
+					<p>And I will stand by you forever.</p>
+					<p>You can take my breath away.</p>
+					<p>You can take my breath away.</p>
+					<p>I can be your hero.</p>
+                    
+                </div><!-- 歌词 -->  
+                <p class="scroll">向下滚动</p>  
+            </div>  
+        </div><!-- #播放列表 -->  
+        <div id="flip-back">  
+            <ul class="playlist" id="playlist">  
+                <h3>专辑列表</h3>  
+                <li>1. Why Not Me</li>  
+                <li>2. 风吹麦浪</li>  
+                <li class="active icon-heart">3. Hero</li><!-- 正在播放列表 -->  
+                <li>4. 星星</li>  
+                <li>5. 我们不该这样的</li>                 
+            </ul>  
+        </div>  
+    </div>  
+    
+    <script src="music.js"></script>  
+    </body>  
+    </html>  
